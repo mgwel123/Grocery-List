@@ -7,7 +7,44 @@
     <title>Document</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
-<body>
+<body class="container">
+    <br>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-grocery-item">New Item</label>
+                        <input type="text" class="form-control" id="new-grocery-item">
+                    </div>
+                    
+        
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="cost">Cost</label>
+                        <input type="text" class="form-control" id="cost">
+                    </div>
+        
+                </div>
+            </div>
+            <br>
+            <button id="add" class="btn btn-primary">Add to List</button>
+
+        </div>
+
+    </div>
+
+    <table id="grocery-list" class="table table-primary table-striped">
+        <tr>
+            <th>Groceries</th>
+            <th>Cost</th>
+        </tr>
+
+    </table>
+
+    
     
 
 
