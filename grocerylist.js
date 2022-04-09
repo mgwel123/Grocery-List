@@ -43,21 +43,21 @@ let bottomRow = table.insertRow(-1);
 bottomRow.insertCell(0).innerHTML = 'Total Cost:';
 let totalCost = bottomRow.insertCell(1);
 totalCost.setAttribute('id', 'total-cost');
-totalCost.innerHTML = '$0.00';      //WIP
+totalCost.innerHTML = '$0.00';      
 
 function updateListTotal () {
     let listItemRows = document.getElementsByClassName(`list-row`);
-    console.log(listItemRows);
+    //console.log(listItemRows);
     let sum = 0;
     for (let i = 0; i < listItemRows.length; i++) {
         let listItemRow = listItemRows[i];
-        console.log(listItemRow);
+        //console.log(listItemRow);
         let costElement = listItemRow.querySelector('#item-price');
         let quantityElement = listItemRow.querySelector('#item-quantity');
-        console.log(costElement, quantityElement);
+        //console.log(costElement, quantityElement);
         let itemCost = parseFloat(costElement.innerText);
         let itemQuantity = parseFloat(quantityElement.innerText);
-        console.log(itemCost, itemQuantity);
+        //console.log(itemCost, itemQuantity);
         sum = sum + (itemCost * itemQuantity); 
     }
     sum = Math.round(sum * 100) / 100;
